@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+}
+.rules-wrapper {
+    height: calc(100vh - 60px);
+    overflow: auto;
+}
+.btn-wrapper {
+    margin-top: 10px;
+    padding: 5px;
+    box-shadow: 1px 1px 10px #ccc;
+}
+.and-condition {
+    display: flex;
+    flex-direction: column;
+}
+.and-condition:after {
+    content: '(OR)';
+    text-align: center;
+    margin: 10px;
+    font-weight: 800;
+}
+.and-condition:last-child:after {
+    content: unset;
+}
+.and-condition .style-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+    padding: 10px;
+}
+.or-condition, .or-condition > div {
+    display: flex;
+    margin: 4px 0;
+    align-items: center;
+}
+.or-condition > div {
+    border: 1px solid;
+}
+.or-condition:after {
+    content: '(AND)';
+    padding: 0 10px;
+}
+.or-condition:last-child:after {
+    content: '';
+}
+
+
+/* Common styles */
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+select {
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid;
+    border-radius: 0;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+select[multiple] {
+    height: 60px;
+    max-height: 100px;
+    overflow: auto;
+    padding: 0;
+}
+button {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #eaeaea;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+button.remove {
+    background-color: #df8a8a;
+    color: #fff;
+    font-weight: bold;
+}
+
+button.add {
+    background: #34c434;
+    color: #fff;
+}
